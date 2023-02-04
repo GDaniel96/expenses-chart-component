@@ -1,10 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ghpages = require("gh-pages");
-
-ghpages.publish("dist", {
-  branch: "main",
-});
 
 module.exports = {
   mode: "development",
