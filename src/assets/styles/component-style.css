@@ -1,0 +1,150 @@
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: hsl(10, 79%, 65%);
+  width: 90%;
+  gap: 100px;
+  border-radius: 10px;
+  color: white;
+}
+
+.my-balance > h2 {
+  margin-top: 0px;
+}
+
+.my-balance > p {
+  margin-bottom: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(33, 100%, 98%);
+  width: 90%;
+  border-radius: 10px;
+}
+
+.graph-container {
+  height: 250px;
+  width: 300px;
+  display: flex;
+  gap: 7px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.information-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.information-section > div > p {
+  color: hsl(28, 10%, 53%);
+  margin-bottom: 0px;
+}
+
+.information-section > div > h1 {
+  color: hsl(25, 47%, 15%);
+  margin-top: 0px;
+}
+.information-section > div > h3 {
+  color: hsl(25, 47%, 15%);
+}
+
+.last-month > h3 {
+  text-align: end;
+  margin-bottom: 0px;
+}
+
+.last-month > p {
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+
+.amount {
+  background-color: hsl(10, 79%, 65%);
+  width: 2rem;
+  border-radius: 5px;
+}
+
+.amount-selected {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.day {
+  padding-top: 15px;
+  color: hsl(28, 10%, 53%);
+}
+
+.active {
+  background-color: hsl(186, 34%, 60%);
+  width: 2rem;
+  border-radius: 5px;
+}
+
+hr {
+  width: 300px;
+  border: none;
+  height: 2px;
+  background: hsl(27, 66%, 92%);
+}
+
+/* Verify if the media query can be imported from a different CSS file */
+
+@media screen and (min-width: 1440px) {
+  .balance {
+    width: 30%;
+    justify-content: space-around;
+    gap: 200px;
+  }
+
+  .main-container {
+    width: 30%;
+  }
+
+  .main-container > h2 {
+    align-self: flex-start;
+    padding-left: 30px;
+  }
+
+  .amount:hover {
+    background-color: hsla(10, 79%, 65%, 0.692);
+  }
+
+  .active:hover {
+    background-color: hsla(186, 34%, 60%, 0.692);
+  }
+
+  .graph-container {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    gap: 10px;
+  }
+
+  hr {
+    width: 350px;
+  }
+
+  .information-section {
+    gap: 75px;
+  }
+}
