@@ -4,7 +4,6 @@ const ghpages = require("gh-pages");
 
 ghpages.publish("dist", {
   branch: "main",
-  repo: "GDaniel96/expenses-chart-component",
 });
 
 module.exports = {
