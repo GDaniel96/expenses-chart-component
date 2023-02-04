@@ -1,18 +1,14 @@
 class DaysView {
-  constructor(element, newElement) {
-    // this.daysView(element);
-    this.element = element;
-    this.newElement = newElement;
+  constructor(day, container) {
+    this.day = day;
+    this.container = container;
   }
-
-  daysView(element, newElement) {
-    const day = element.day;
-
+  render() {
     /// New container for the day element
     let dayElement = document.createElement("div");
     dayElement.className = "day";
-    dayElement.innerText = day;
-    newElement.appendChild(dayElement);
+    dayElement.innerText = this.day;
+    this.container.appendChild(dayElement);
   }
 }
 
