@@ -1,19 +1,27 @@
 class AmountView {
-  constructor(element, newElement) {
-    this.element = element;
-    this.newElement = newElement;
+  constructor(amount, container, active, onClick) {
+    this.amount = amount;
+    this.container = container;
+    this.active = active;
+    this.onClick = onClick;
   }
 
-  amountView(element, newElement) {
-    const amount = element.amount;
+  render() {
     let amountElement = document.createElement("div");
-    amountElement.style.height = `${amount * 3}px`;
-    amountElement.setAttribute("data-amount", `$${amount}`);
-    newElement.appendChild(amountElement);
+    amountElement.style.height = `${this.amount * 3}px`;
+    amountElement.setAttribute("data-amount", `$${this.amount}`);
+    amountElement.classList.add("amount");
+    this.container.appendChild(amountElement);
 
-    if (amountElement.previousSibling.innerText === "wed") {
+    if (this.active) {
       amountElement.classList.add("active");
     }
+  }
+
+  setEvents() {
+    this.container.addEventListener("click", () => {
+      this.onClick();
+    });
   }
 }
 

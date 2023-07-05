@@ -1,9 +1,5 @@
 class ActiveView {
-  constructor() {
-    this.activeView();
-  }
-
-  activeView() {
+  render() {
     const elementContainer = document.querySelectorAll("[data-amount]");
 
     elementContainer.forEach((item) => {
